@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--head部分-->
+<head>
+<title>layui</title>
+    <meta charset="utf-8"></meta>
+</head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    $(function () {
+        $("#login").click(function () {
+            $("#login").submit();
+            /*$.ajax({
+                url: "/sys/main",
+                type: "post",
+                data: {
+                    "username":$("#username").val(),
+                    "password":$("#password").val()
+                },//核心代码，form表单序列化
+                dataType: "JSON",
+                success: function(data) {
+                    alert(data.url);
+                    // window.location.href = data.url;
+                },
+                error: function(data) {
+alert(22);
+                }
+            });*/
+        })
+    })
+</script>
+</head>
+
+<body >
+<div>
+    <form id="login_form" action="/sys/main" method="post">
+        用户名：<input id="username" type="text" value=""/>
+        密码：<input id="password" type="password" value=""/>
+        <p><button id="login" >登录</button>&nbsp<input type="reset" value="重置"></p>
+    </form>
+
+</div>
+</body>
+</html>
